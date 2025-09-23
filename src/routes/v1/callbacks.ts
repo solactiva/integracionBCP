@@ -45,10 +45,13 @@ router.post('/qr', async (req: Request, res: Response) => {
   try {
     // 1) Auth
     const creds = parseBasicAuth(req.header('authorization'));
-    if (!creds || !config.basicUsername || !config.basicPassword) {
+    // Prefer Mongo-loaded bcpusername/bcppassword, fallback to basicUsername/basicPassword
+    const expectedUsername = (config as any).bcpusername ?? (config as any).basicUsername;
+    const expectedPassword = (config as any).bcppassword ?? (config as any).basicPassword;
+    if (!creds || !expectedUsername || !expectedPassword) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
-    const ok = creds.username === config.basicUsername && creds.password === config.basicPassword;
+    const ok = creds.username === expectedUsername && creds.password === expectedPassword;
     if (!ok) {
       return res.status(401).json({ message: 'Unauthorized' });
     }

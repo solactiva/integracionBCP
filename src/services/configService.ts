@@ -5,6 +5,8 @@ type DbConfig = {
   baseURL?: string;
   username?: string;
   password?: string;
+  bcpusername?: string;
+  bcppassword?: string;
   businessCode?: string;
   appUserId?: string;
   publicToken?: string;
@@ -20,6 +22,8 @@ export async function loadAndApplyBcpConfig(): Promise<void> {
   if (doc.baseURL) (config as any).baseURL = doc.baseURL;
   if (doc.username) (config as any).basicUsername = doc.username;
   if (doc.password) (config as any).basicPassword = doc.password;
+  if (doc.bcpusername) (config as any).bcpusername = doc.bcpusername;
+  if (doc.bcppassword) (config as any).bcppassword = doc.bcppassword;
   if (doc.businessCode) (config as any).businessCode = doc.businessCode;
   if (doc.appUserId) (config as any).appUserId = doc.appUserId;
   if (doc.publicToken) (config as any).publicToken = doc.publicToken;
