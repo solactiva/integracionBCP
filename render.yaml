@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: openbanking-proxy
+    env: node
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    healthCheckPath: /health
+    plan: free
+    region: oregon
+    envVars:
+      - key: BASE_URL
+        sync: false
+      - key: BASIC_USERNAME
+        sync: false
+      - key: BASIC_PASSWORD
+        sync: false
+      - key: MTLS_PFX_PATH
+        value: ./certs/BCP_SANDBOX_OPENBANKING.pfx
+      - key: MTLS_PFX_PASSWORD
+        sync: false
+      - key: PFX_BASE64
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: API_VERSION
+        value: v1
+      - key: API_SUPPORTED_VERSIONS
+        value: v1
+      - key: API_LEGACY_DEFAULT_VERSION
+        value: v1

@@ -1,0 +1,548 @@
+
+> openbanking-proxy@1.0.0 dev
+> nodemon --watch src --exec ts-node src/index.ts
+
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): src/**/*[39m
+[33m[nodemon] watching extensions: ts,json[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (14) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (14) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (14) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (14) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (14) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (14) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (14) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (14) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (9) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/generarQr.ts(89,13): error TS18004: No value exists in scope for the shorthand property 'payload'. Either declare one or provide an initializer.
+src/routes/v1/generarQr.ts(119,11): error TS18004: No value exists in scope for the shorthand property 'payload'. Either declare one or provide an initializer.
+
+    at createTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1691:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 18004, 18004 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  override existing env vars with { override: true }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(91,77): error TS18047: 'result' is possibly 'null'.
+
+    at createTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1691:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 18047 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(93,77): error TS18047: 'result' is possibly 'null'.
+
+    at createTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1691:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 18047 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(93,77): error TS18047: 'result' is possibly 'null'.
+
+    at createTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1691:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 18047 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 2 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 3 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+  /home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at:/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: st[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 2 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 3 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index si/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 2 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 3 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type [dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<Document>, update: Document[] | UpdateFilter<Document>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<Document>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<Document, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Col[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<BcpQrTransaccionDoc>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<BcpQrTransaccionDoc, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 2 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<BcpQrTransaccionDoc>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<BcpQrTransaccionDoc, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 3 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<BcpQrTransaccionDoc>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAccept/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(168,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'PushOperator<BcpQrTransaccionDoc>'.
+      Type '{ events: { type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<BcpQrTransaccionDoc, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+  Overload 2[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(167,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'MatchKeysAndValues<BcpQrTransaccionDoc>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+  Overload 2 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'MatchKeysAndValues<BcpQrTransaccionDoc>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+  Overload 3 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions): Promise<...>', gave the following error.
+    Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'MatchKeysAndValues<BcpQrTransaccionDoc>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+
+    at createTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1691:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 2769 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+e to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+  Overload 2 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'MatchKeysAndValues<BcpQrTransaccionDoc>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+  Overload 3 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions): Promise<...>', gave the following error.
+    Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'MatchKeysAndValues<BcpQrTransaccionDoc>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+
+    at createTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1691:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 2769 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 2769 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
+te; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }; }' is not assignable to type 'NotAcceptedFields<BcpQrTransaccionDoc, readonly any[]>'.
+        Property 'events' is incompatible with index signature.
+          Type '{ type: string; at: Date; data: { IdCorrelation: string; CorrelationId: string | null; Id: number | null; ServiceCode: string | null; BusinessCode: string | null; IdQr: string | null; ... 29 more ...; Collectors: any[] | null; }; }' is not assignable to type 'undefined'.
+
+    at createTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1691:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 2769 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 📡 version env with Radar: https://dotenvx.com/radar
+/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859
+    return new TSError(diagnosticText, diagnosticCodes, diagnostics);
+           ^
+TSError: ⨯ Unable to compile TypeScript:
+src/routes/v1/callbacks.ts(167,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'MatchKeysAndValues<BcpQrTransaccionDoc>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+  Overload 2 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions & { ...; }): Promise<...>', gave the following error.
+    Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'MatchKeysAndValues<BcpQrTransaccionDoc>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+  Overload 3 of 4, '(filter: Filter<BcpQrTransaccionDoc>, update: Document[] | UpdateFilter<BcpQrTransaccionDoc>, options: FindOneAndUpdateOptions): Promise<...>', gave the following error.
+    Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'MatchKeysAndValues<BcpQrTransaccionDoc>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+      Type '{ createdAt: Date; success: undefined; direction: string; endpoint: string; }' is not assignable to type 'Readonly<Partial<BcpQrTransaccionDoc>>' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+        Types of property 'success' are incompatible.
+          Type 'undefined' is not assignable to type 'boolean'.
+
+    at createTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:863:19)
+    at getOutput (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1077:36)
+    at Object.compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1433:41)
+    at Module.m._compile (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1691:10)
+    at Object.require.extensions.<computed> [as .ts] (/home/programador4/CascadeProjects/openbanking-proxy/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1317:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1127:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14) {
+  diagnosticCodes: [ 2769 ]
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+[dotenv@17.2.2] injecting env (5) from .env -- tip: 📡 observe env with Radar: https://dotenvx.com/radar
+Mongo indexes ensured for bcpQrTransaccion
+Server listening on http://localhost:4001 (versions: /api/v1, /api/v2)
