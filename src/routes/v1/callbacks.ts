@@ -49,25 +49,29 @@ router.post('/qr', async (req: Request, res: Response) => {
     const expectedUsername = (config as any).bcpusername ?? (config as any).basicUsername;
     const expectedPassword = (config as any).bcppassword ?? (config as any).basicPassword;
     if (!creds || !expectedUsername || !expectedPassword) {
-      return res.status(401).json({ message: 'Unauthorized' });
+      return res.status(401).json({ State:'003',Message: 'Credenciales Incorrectas',Data: {
+        Id: 'E-'+ 124548,
+      } });
     }
     const ok = creds.username === expectedUsername && creds.password === expectedPassword;
     if (!ok) {
-      return res.status(401).json({ message: 'Unauthorized' });
+      return res.status(401).json({ State:'003',Message: 'Credenciales Incorrectas',Data: {
+        Id: 'E-'+ 124548,
+      } });
     }
-
+    
     // 2) Body and key selection
     const body = req.body || {};
     // IdCorrelation is the identifier we stored as correlationId internally
     const idCorrelation: any = body.IdCorrelation;
     if (!idCorrelation || (typeof idCorrelation !== 'string' && typeof idCorrelation !== 'number')) {
-      return res.status(400).json({ message: 'Missing IdCorrelation in body' });
+      return res.status(400).json({ State:'060',Message: 'Missing IdCorrelation in body' });
     }
     const correlationId = String(idCorrelation).trim();
     if (!correlationId) {
-      return res.status(400).json({ message: 'Invalid IdCorrelation' });
+      return res.status(400).json({ State:'061',Message: 'Invalid IdCorrelation' });
     }
-
+    
     // Normalize fields
     const normalized = {
       IdCorrelation: correlationId,
