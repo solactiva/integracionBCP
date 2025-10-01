@@ -13,8 +13,8 @@ export type AppConfig = {
   basicPassword: string;
   // Credentials that may be loaded from Mongo (collection `bcpconfigs`)
   // and used specifically for BCP callback auth
-  bcpusername?: string;
-  bcppassword?: string;
+  bcpusername: string;
+  bcppassword: string;
   mtlsPfxPath?: string;
   mtlsPfxPassword?: string;
   businessCode?: string;
