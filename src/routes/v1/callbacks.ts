@@ -46,8 +46,8 @@ router.post('/qr', async (req: Request, res: Response) => {
     // 1) Auth
     const creds = parseBasicAuth(req.header('authorization'));
     // Prefer Mongo-loaded bcpusername/bcppassword, fallback to basicUsername/basicPassword
-    const expectedUsername = (config as any).bcpusername ?? (config as any).basicUsername;
-    const expectedPassword = (config as any).bcppassword ?? (config as any).basicPassword;
+    const expectedUsername = (config as any).bcpusername ?? (config as any).bcpusername;
+    const expectedPassword = (config as any).bcppassword ?? (config as any).bcppassword;
     if (!creds || !expectedUsername || !expectedPassword) {
       return res.status(401).json({ State:'003',Message: 'Credenciales Incorrectas',Data: {
         Id: 'E-'+ 124548,
