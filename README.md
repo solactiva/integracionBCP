@@ -1,3 +1,5 @@
+![Cron job status](https://api.cron-job.org/jobs/6661285/7fde12aa488e3b8e/status-1.svg)
+
 # OpenBanking Proxy API
 
 ## Requisitos

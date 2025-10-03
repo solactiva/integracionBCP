@@ -59,7 +59,6 @@ router.post('/qr', async (req: Request, res: Response) => {
         Id: 'E-'+ 364896,
       } });
     }
-    
     // 2) Body and key selection
     const body = req.body || {};
     // IdCorrelation is the identifier we stored as correlationId internally
@@ -72,12 +71,27 @@ router.post('/qr', async (req: Request, res: Response) => {
       return res.status(400).json({ State:'061',Message: 'Invalid IdCorrelation' });
     }
     
+    // 3) Check if IdCorrelation was previously registered
+    const col = await getBcpQrTransaccionCollection();
+    const existingDoc = await col.findOne({ correlationId });
+    if (!existingDoc) {
+      return res.status(400).json({ State:'062',Message: 'IdCorrelation no fue registrado previamente', Data: {
+        IdCorrelation: correlationId,
+      } });
+    }
+
+    // 4) Check if callback was already registered for this IdCorrelation
+    if (existingDoc.callback) {
+      return res.status(400).json({ State:'063',Message: 'Callback ya fue registrado previamente para este IdCorrelation', Data: {
+        IdCorrelation: correlationId,
+      } });
+    }
+
     // Normalize fields
     const normalized = {
       IdCorrelation: correlationId,
       CorrelationId: toStringOrNull(body.CorrelationId),
       Id: toNumberOrNull(body.Id),
-      ServiceCode: toStringOrNull(body.ServiceCode),
       BusinessCode: toStringOrNull(body.BusinessCode),
       IdQr: toStringOrNull(body.IdQr),
       Eif: toStringOrNull(body.Eif),
@@ -112,7 +126,7 @@ router.post('/qr', async (req: Request, res: Response) => {
       Collectors: toArrayOrNull(body.Collectors),
     };
 
-    // 3) Prepare update document (flatten important fields + keep full callback)
+    // 4) Prepare update document (flatten important fields + keep full callback)
     const now = new Date();
     // Only set non-null fields to avoid overwriting existing data with nulls
     const setFields: any = {
@@ -134,8 +148,7 @@ router.post('/qr', async (req: Request, res: Response) => {
       if (v !== null && v !== undefined) setFields[k] = v;
     }
 
-    // 4) Match existing transaction primarily by correlationId; fallback by IdCorrelation
-    const col = await getBcpQrTransaccionCollection();
+    // 5) Match existing transaction primarily by correlationId; fallback by IdCorrelation
     const filter: any = { correlationId };
 
     // ensure createdAt on insert
@@ -144,6 +157,8 @@ router.post('/qr', async (req: Request, res: Response) => {
       direction: 'callback',
       endpoint: 'callback/qr',
     };
+
+    
 
     const result = await col.findOneAndUpdate(
       filter,
