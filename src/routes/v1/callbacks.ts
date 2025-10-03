@@ -75,15 +75,15 @@ router.post('/qr', async (req: Request, res: Response) => {
     const col = await getBcpQrTransaccionCollection();
     const existingDoc = await col.findOne({ correlationId });
     if (!existingDoc) {
-      return res.status(400).json({ State:'062',Message: 'IdCorrelation no fue registrado previamente', Data: {
-        IdCorrelation: correlationId,
+      return res.status(400).json({ State:'062',Message: 'Id no fue registrado previamente', Data: {
+        Id: req.body.Id,
       } });
     }
 
     // 4) Check if callback was already registered for this IdCorrelation
     if (existingDoc.callback) {
-      return res.status(400).json({ State:'063',Message: 'Callback ya fue registrado previamente para este IdCorrelation', Data: {
-        IdCorrelation: correlationId,
+      return res.status(400).json({ State:'063',Message: 'QR ya fue procesado previamente para este Id', Data: {
+        Id: req.body.Id,
       } });
     }
 
