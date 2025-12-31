@@ -1,7 +1,67 @@
 import { Router, Request, Response } from 'express';
 import { getBcpQrTransaccionCollection } from '../../db/mongo';
+import { config } from '../../config';
+import { getHttpClient } from '../../httpClient';
+import axios, { AxiosInstance } from 'axios';
+import https from 'https';
+import fs from 'fs';
+import crypto from 'crypto';
 
 const router = Router();
+function generateCorrelationId(): string {
+  const block = (len: number) =>
+    crypto
+      .randomBytes(len * 2)
+      .toString('base64')
+      .replace(/[^A-Z0-9]/gi, '')
+      .toUpperCase()
+      .slice(0, len);
+  // Examples: 0001-001-123456 or 000A-BCD-EFGHIJ
+  return `${block(4)}-${block(3)}-${block(6)}`;
+}
+
+function getV3HttpClient(): AxiosInstance {
+  let servername: string | undefined = undefined;
+  try {
+    const u = new URL('https://openbanking.bcp.com.bo/Web_ApiQr');
+    servername = u.hostname;
+  } catch (_) {
+    // ignore
+  }
+
+  const httpsAgent = new https.Agent(
+    config.mtlsPfxPath
+      ? {
+          pfx: fs.readFileSync(config.mtlsPfxPath),
+          passphrase: config.mtlsPfxPassword,
+          servername,
+          minVersion: 'TLSv1.2',
+          maxVersion: 'TLSv1.2',
+          rejectUnauthorized: true,
+        }
+      : {
+          servername,
+          minVersion: 'TLSv1.2',
+          maxVersion: 'TLSv1.2',
+          rejectUnauthorized: true,
+        }
+  );
+
+  return axios.create({
+    baseURL: 'https://openbanking.bcp.com.bo/Web_ApiQr',
+    proxy: false,
+    auth: {
+      username: config.basicUsername,
+      password: config.basicPassword,
+    },
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    httpsAgent,
+    timeout: 30000,
+  });
+}
 
 // GET /api/v1/auditoria/qr
 // Query params:
@@ -94,6 +154,66 @@ router.get('/qr/:correlationId', async (req: Request, res: Response) => {
     }
     res.json(doc);
   } catch (error: any) {
+    res.status(500).json({ message: 'Internal error', error: error.message });
+  }
+});
+
+router.get('/qr/banco', async (req: Request, res: Response) => {
+  try {
+    let payload : any;
+    const { from, to, includeEvents } = req.query as Record<string, string | undefined>;
+    const hasFrom = !!from && typeof from === 'string';
+    const hasTo = !!to && typeof to === 'string';
+    payload = {
+      appUserId: (config as any).appUserId,
+      currency: 'BOB',
+      serviceCode: '050',
+      businessCode: (config as any).businessCode,
+      publicToken: (config as any).publicToken,
+      startDate: hasFrom ? from.replace(/-/g, '') : '', //aaaaMMdd
+      finalDate: hasTo ? to.replace(/-/g, ''):'', //aaaaMMdd
+      statusPayment: 'P',
+    };
+    let correlationId: string | undefined;
+    correlationId = generateCorrelationId();
+    const response = await getV3HttpClient().post('/api/v3/Qr/Report/Detail', payload, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Correlation-Id': correlationId,
+        // Authorization Basic se setea automáticamente desde axios auth en el cliente
+      },
+    });
+    
+    // Persist transaction (success)
+    try {
+      const col = await getBcpQrTransaccionCollection();
+      await col.insertOne({
+        correlationId,
+        IdCorrelation: correlationId,
+        direction: 'request',
+        endpoint: '/api/v3/Qr/Report/Detail',
+        request: {
+          payload,
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Correlation-Id': correlationId },
+        },
+        response: {
+          status: response.status,
+          data: response.data,
+        },
+        createdAt: new Date(),
+        success: response.data?.state === '00',
+      });
+    } catch (dbErr) {
+      console.error('Failed to persist bcpQrTransaccion (success):', (dbErr as Error).message);
+    }
+    
+    // Return response in the same format as received from BCP
+    return res.status(response.status).json({ 
+      correlationId, 
+      ...response.data 
+    });
+  } catch (error:any) {
     res.status(500).json({ message: 'Internal error', error: error.message });
   }
 });
