@@ -23,7 +23,7 @@ function generateCorrelationId(): string {
 function getV3HttpClient(): AxiosInstance {
   let servername: string | undefined = undefined;
   try {
-    const u = new URL('https://openbanking.bcp.com.bo/Web_ApiQr');
+    const u = new URL('https://openbanking.bcp.com.bo/Web_ApiQr/api/v3');
     servername = u.hostname;
   } catch (_) {
     // ignore
@@ -48,7 +48,7 @@ function getV3HttpClient(): AxiosInstance {
   );
 
   return axios.create({
-    baseURL: 'https://openbanking.bcp.com.bo/Web_ApiQr',
+    baseURL: 'https://openbanking.bcp.com.bo/Web_ApiQr/api/v3',
     proxy: false,
     auth: {
       username: config.basicUsername,
@@ -137,27 +137,8 @@ router.get('/qr', async (req: Request, res: Response) => {
   }
 });
 
-// GET /api/v1/auditoria/qr/:correlationId
-// Returns a single transaction document. Use includeEvents=true to include history.
-router.get('/qr/:correlationId', async (req: Request, res: Response) => {
-  try {
-    const id = String(req.params.correlationId || '').trim();
-    if (!id) {
-      return res.status(400).json({ message: 'Missing correlationId' });
-    }
-    const includeEvents = String(req.query.includeEvents || 'true');
-    const col = await getBcpQrTransaccionCollection();
-    const projection = includeEvents === 'true' ? undefined : { events: 0 } as any;
-    const doc = await col.findOne({ $or: [{ correlationId: id }, { IdCorrelation: id }] }, { projection });
-    if (!doc) {
-      return res.status(404).json({ message: 'Not found', correlationId: id });
-    }
-    res.json(doc);
-  } catch (error: any) {
-    res.status(500).json({ message: 'Internal error', error: error.message });
-  }
-});
-
+// GET /api/v1/auditoria/qr/banco
+// Query params: from, to, includeEvents
 router.get('/qr/banco', async (req: Request, res: Response) => {
   try {
     let payload : any;
@@ -176,7 +157,7 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
     };
     let correlationId: string | undefined;
     correlationId = generateCorrelationId();
-    const response = await getV3HttpClient().post('/api/v3/Qr/Report/Detail', payload, {
+    const response = await getV3HttpClient().post('/Qr/Report/Detail', payload, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -192,7 +173,7 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
         correlationId,
         IdCorrelation: correlationId,
         direction: 'request',
-        endpoint: '/api/v3/Qr/Report/Detail',
+        endpoint: '/Qr/Report/Detail',
         request: {
           payload,
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Correlation-Id': correlationId },
@@ -208,12 +189,33 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
       console.error('Failed to persist bcpQrTransaccion (success):', (dbErr as Error).message);
     }
     
-    // Return response in the same format as received from BCP
+    // Return response in same format as received from BCP
     return res.status(response.status).json({ 
       correlationId, 
       ...response.data 
     });
   } catch (error:any) {
+    res.status(500).json({ message: 'Internal error', error: error.message });
+  }
+});
+
+// GET /api/v1/auditoria/qr/:correlationId
+// Returns a single transaction document. Use includeEvents=true to include history.
+router.get('/qr/:correlationId', async (req: Request, res: Response) => {
+  try {
+    const id = String(req.params.correlationId || '').trim();
+    if (!id) {
+      return res.status(400).json({ message: 'Missing correlationId' });
+    }
+    const includeEvents = String(req.query.includeEvents || 'true');
+    const col = await getBcpQrTransaccionCollection();
+    const projection = includeEvents === 'true' ? undefined : { events: 0 } as any;
+    const doc = await col.findOne({ $or: [{ correlationId: id }, { IdCorrelation: id }] }, { projection });
+    if (!doc) {
+      return res.status(404).json({ message: 'Not found', correlationId: id });
+    }
+    res.json(doc);
+  } catch (error: any) {
     res.status(500).json({ message: 'Internal error', error: error.message });
   }
 });
