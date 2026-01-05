@@ -141,11 +141,22 @@ router.get('/qr', async (req: Request, res: Response) => {
 // Query params: from, to, includeEvents
 router.get('/qr/banco', async (req: Request, res: Response) => {
   try {
-    let payload : any;
     const { from, to, includeEvents } = req.query as Record<string, string | undefined>;
     const hasFrom = !!from && typeof from === 'string';
     const hasTo = !!to && typeof to === 'string';
-    payload = {
+    
+    // Log para debugging
+    console.log('=== Auditoria QR Banco Debug ===');
+    console.log('Query params:', { from, to, includeEvents });
+    console.log('Config values:', {
+      appUserId: (config as any).appUserId,
+      businessCode: (config as any).businessCode,
+      publicToken: (config as any).publicToken ? '***' : 'MISSING',
+      basicUsername: config.basicUsername ? '***' : 'MISSING',
+      basicPassword: config.basicPassword ? '***' : 'MISSING',
+    });
+    
+    const payload = {
       appUserId: (config as any).appUserId,
       currency: 'BOB',
       serviceCode: '050',
@@ -155,16 +166,22 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
       finalDate: hasTo ? to.replace(/-/g, ''):'', //aaaaMMdd
       statusPayment: 'P',
     };
-    let correlationId: string | undefined;
-    correlationId = generateCorrelationId();
+    
+    console.log('Payload to send:', JSON.stringify(payload, null, 2));
+    
+    const correlationId = generateCorrelationId();
+    console.log('Generated correlationId:', correlationId);
+    
     const response = await getV3HttpClient().post('/Qr/Report/Detail', payload, {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Correlation-Id': correlationId,
-        // Authorization Basic se setea automáticamente desde axios auth en el cliente
       },
     });
+    
+    console.log('BCP Response status:', response.status);
+    console.log('BCP Response data:', JSON.stringify(response.data, null, 2));
     
     // Persist transaction (success)
     try {
@@ -195,7 +212,29 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
       ...response.data 
     });
   } catch (error:any) {
-    res.status(500).json({ message: 'Internal error', error: error.message });
+    console.error('=== Auditoria QR Banco Error ===');
+    console.error('Error type:', error.constructor.name);
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    
+    // Si es error de axios, mostrar más detalles
+    if (error.response) {
+      console.error('Axios error response:', {
+        status: error.response.status,
+        statusText: error.response.statusText,
+        data: error.response.data,
+        headers: error.response.headers,
+      });
+    } else if (error.request) {
+      console.error('Axios error request (no response):', error.request);
+    }
+    
+    res.status(500).json({ 
+      message: 'Internal error', 
+      error: error.message,
+      type: error.constructor.name,
+      correlationId: error.correlationId || 'none'
+    });
   }
 });
 
