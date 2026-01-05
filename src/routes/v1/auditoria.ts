@@ -217,6 +217,8 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
     console.error('Error message:', error.message);
     console.error('Error stack:', error.stack);
     
+    let correlationId = 'none';
+    
     // Si es error de axios, mostrar más detalles
     if (error.response) {
       console.error('Axios error response:', {
@@ -225,6 +227,14 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
         data: error.response.data,
         headers: error.response.headers,
       });
+      
+      // Si es error 400 del BCP, devolver esa misma respuesta
+      if (error.response.status === 400) {
+        return res.status(400).json({
+          correlationId,
+          ...error.response.data
+        });
+      }
     } else if (error.request) {
       console.error('Axios error request (no response):', error.request);
     }
@@ -233,7 +243,7 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
       message: 'Internal error', 
       error: error.message,
       type: error.constructor.name,
-      correlationId: error.correlationId || 'none'
+      correlationId
     });
   }
 });
