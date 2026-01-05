@@ -162,8 +162,8 @@ router.get('/qr/banco', async (req: Request, res: Response) => {
       serviceCode: '050',
       businessCode: (config as any).businessCode,
       publicToken: (config as any).publicToken,
-      startDate: hasFrom ? from.replace(/-/g, '') : '', //aaaaMMdd
-      finalDate: hasTo ? to.replace(/-/g, ''):'', //aaaaMMdd
+      startDate: hasFrom ? from.replace(/-/g, '') : '20250101', //aaaaMMdd - fecha por defecto
+      finalDate: hasTo ? to.replace(/-/g, '') : '20251231', //aaaaMMdd - fecha por defecto
       statusPayment: 'P',
     };
     
